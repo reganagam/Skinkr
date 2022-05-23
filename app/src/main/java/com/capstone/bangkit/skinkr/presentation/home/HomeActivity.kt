@@ -1,7 +1,8 @@
-package com.capstone.bangkit.skinkr
+package com.capstone.bangkit.skinkr.presentation.home
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.capstone.bangkit.skinkr.R
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -8,7 +8,7 @@ The classes are blackhead, folikulitis, melasma, nodules, normalface, papula, pu
 The dataset devided to train directory and test directory for validation.
 There are 621 images in train directory and 242 images in test directory.
 
-Data Source:
+Data Sources:
 
 * [dermnetnz.org](https://dermnetnz.org)  
 * [dermatlas.net](https://www.dermatlas.net)  

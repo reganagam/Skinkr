@@ -1,7 +1,0 @@
-https://drive.google.com/drive/folders/1JzLcXm5AlF2o_YRD2AytNM9AFYJIvKew?usp=sharing
-
-The dataset was collected by us from many sources.
-The dataset included 9 class classifications for acne problems.
-The classes are blackhead, folikulitis, melasma, nodules, normalface, papula, pustula, rosacea and whitehead.
-The dataset devided to train directory and test directory for validation.
-There are 621 images in train directory and 242 images in test directory.

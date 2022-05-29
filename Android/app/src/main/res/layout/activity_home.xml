@@ -6,4 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".presentation.home.HomeActivity">
 
+
+    <TextView
+        android:id="@+id/listAcneTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="List of Acne"
+        tools:layout_editor_absoluteY="355dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/acneRV"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <TextView
+        android:id="@+id/listProductsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="List of Products"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/produtRV"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:padding="8dp"
+        tools:layout_editor_absoluteY="532dp" />
+
+    <ImageView
+        android:id="@+id/imageFace"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/face_icon"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <Button
+        android:id="@+id/uploadAndScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan my face"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="307dp" />
+
+    <ImageButton
+        android:id="@+id/btnInsertPhoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/square_button"
+        android:backgroundTint="@color/grey"
+        android:src="@drawable/ic_baseline_insert_photo_24"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

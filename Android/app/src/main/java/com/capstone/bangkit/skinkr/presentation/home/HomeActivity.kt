@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -18,6 +19,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.bangkit.skinkr.R
+import com.capstone.bangkit.skinkr.data.repository.ResultRespond
 import com.capstone.bangkit.skinkr.databinding.ActivityHomeBinding
 import com.capstone.bangkit.skinkr.presentation.ViewModelFactory
 import com.capstone.bangkit.skinkr.presentation.createTempFile
@@ -85,12 +87,12 @@ class HomeActivity : AppCompatActivity() {
 
 
         Log.d("Testing","HomeActiviy")
-/*
+
         binding.btnInsertPhoto.setOnClickListener { startGallery() }
         binding.uploadAndScan.setOnClickListener { uploadToCC() }
         binding.acneRV.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
 
-        binding.produtRV.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)*/
+        binding.produtRV.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
     }
 
     private fun startGallery() {
@@ -111,7 +113,7 @@ class HomeActivity : AppCompatActivity() {
 
             getFile = myFile
 
-            //binding.imageFace.setImageURI(selectedImg)
+            binding.imageFace.setImageURI(selectedImg)
         }
     }
 
@@ -140,14 +142,35 @@ class HomeActivity : AppCompatActivity() {
             getFile = myFile
 
 
-           // val result = rotateBitmap(BitmapFactory.decodeFile(getFile?.path))
-            //binding.imageFace.setImageBitmap(result)
+           val result = rotateBitmap(BitmapFactory.decodeFile(getFile?.path))
+           binding.imageFace.setImageBitmap(result)
         }
     }
 
     private fun uploadToCC() {
         if (getFile!= null) {
-            Log.d("GetFile","ada gais")
+            homeViewModel.uploadAndScan(getFile!!).observe(this){result->
+                if(result != null) {
+                    when (result) {
+                        is ResultRespond.Loading -> {
+                            //binding.progressBar.visibility = View.VISIBLE
+                        }
+                        is ResultRespond.Success -> {
+                            val intent = Intent(this,ResultActivity::class.java)
+                            intent.putExtra(ResultActivity.ACNE_NAME,"ACNE_NAME")
+                            startActivity(intent)
+                            //binding.progressBar.visibility = View.GONE
+                        }
+                        is ResultRespond.Error -> {
+                           // binding.progressBar.visibility = View.GONE
+                            Toast.makeText(this,
+                                "Terjadi kesalahan" + result.error,
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                }
+            }
         } else  {
             Log.d("GetFile","ndak ada")
 

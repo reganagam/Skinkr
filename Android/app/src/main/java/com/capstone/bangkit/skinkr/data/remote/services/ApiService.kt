@@ -10,7 +10,7 @@ import retrofit2.http.Part
 
 interface ApiService {
     @Multipart
-    @POST("/v1/stories/guest")
+    @POST("/")
     fun uploadImage(
         @Part file: MultipartBody.Part
     ): Call<AcneResponse>

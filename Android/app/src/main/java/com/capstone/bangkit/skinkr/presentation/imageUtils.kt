@@ -1,5 +1,6 @@
 package com.capstone.bangkit.skinkr.presentation
 
+import android.R.attr
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -7,9 +8,11 @@ import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.net.Uri
 import android.os.Environment
+import android.util.Base64
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 private const val FILENAME_FORMAT = "dd-MMM-yyyy"
 
@@ -83,4 +86,8 @@ fun reduceFileImage(file: File): File {
     bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, FileOutputStream(file))
 
     return file
+}
+
+fun convertToBase64(attachment: File): String {
+    return Base64.encodeToString(attachment.readBytes(), Base64.NO_WRAP)
 }

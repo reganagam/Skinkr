@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 data class AcneResponse(
     @field:SerializedName("prediction")
-    val prediction: String,
-
+    val prediction: String
+/*
     @field:SerializedName("products")
-    val products: String
+    val products: String*/
 )

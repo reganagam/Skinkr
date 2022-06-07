@@ -7,5 +7,5 @@ import okhttp3.RequestBody
 import java.io.File
 
 class HomeViewModel(private val mAcneRepository: AcneRepository) : ViewModel(){
-    fun uploadAndScan(photo : File) = mAcneRepository.uploadAndScan(photo)
+    fun uploadAndScan(photo: File) = mAcneRepository.uploadAndScan(photo)
 }

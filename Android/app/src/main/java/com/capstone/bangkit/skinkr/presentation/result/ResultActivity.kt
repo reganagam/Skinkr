@@ -6,9 +6,6 @@ import androidx.annotation.StringRes
 import com.capstone.bangkit.skinkr.R
 
 class ResultActivity : AppCompatActivity() {
-
-
-
     companion object {
         val ACNE_NAME = "ACNE_NAME"
     }

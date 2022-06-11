@@ -1,19 +1,19 @@
 # Cloud Computing
 
-#SkinKR API
-###Overview
+# SkinKR API
+### Overview
 - API URL	https://skinkrcc-mzlcbhc7tq-uc.a.run.app
 - API Version	1.0
 - Request Method	Request (POST)
 - Response Format	JSON Format
 
-###Post 
+### Post 
 - If you want to use this API, you need to post the json format containing data which is decoded from image to base64
 ```
 requests.post("https://skinkrcc-mzlcbhc7tq-uc.a.run.app",json={'base64': *decode image to base64*})
 ```
 
-###Response
+### Response
 - Response example
 ```
 {
@@ -32,8 +32,8 @@ requests.post("https://skinkrcc-mzlcbhc7tq-uc.a.run.app",json={'base64': *decode
 }
 ```
 
-#Google Cloud Run
-###1. Write App (Flask, TensorFlow)
+# Google Cloud Run
+### 1. Write App (Flask, TensorFlow)
 - `main.py` as implementation of app
 
 ### 2. Setup Google Cloud 

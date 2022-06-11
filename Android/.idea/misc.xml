@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/_git-mirror/Skinkr/Android/app/src/main/res/layout/activity_result.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/face_icon.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/ic_baseline_insert_photo_24.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/oval_iv.xml" value="0.195" />

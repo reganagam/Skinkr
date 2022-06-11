@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -30,6 +31,8 @@ import java.io.File
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+
+    private lateinit var usedImgForPass: Bitmap
 
     private val homeViewModel : HomeViewModel by viewModels {
         ViewModelFactory.getInstance(this)
@@ -115,6 +118,7 @@ class HomeActivity : AppCompatActivity() {
 
 
            val result = rotateBitmap(BitmapFactory.decodeFile(getFile?.path))
+           usedImgForPass = result
            binding.imageFace.setImageBitmap(result)
         }
     }
@@ -130,7 +134,13 @@ class HomeActivity : AppCompatActivity() {
                         }
                         is ResultRespond.Success -> {
                             val intent = Intent(this,ResultActivity::class.java)
-                            intent.putExtra(ResultActivity.ACNE_NAME,"ACNE_NAME")
+                            intent.putExtra(ResultActivity.ACNE_NAME,result.data.acneName)
+                            intent.putExtra(ResultActivity.ACNE_DESC,result.data.acneDesc)
+                            intent.putExtra(ResultActivity.ACNE_SOL,result.data.acneSolusi.toString())
+                            intent.putExtra(ResultActivity.ACNE_SARAN,result.data.acneSaran.toString())
+
+                            intent.putExtra(ResultActivity.USED_IMAGE,usedImgForPass)
+
                             startActivity(intent)
                             binding.loading.visibility = View.GONE
                         }

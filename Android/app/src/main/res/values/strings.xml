@@ -3,5 +3,9 @@
     <string name="acne_name">Acne Name</string>
     <string name="tv_acne_name_pc">Acne Name</string>
     <string name="tv_acne_desc_pc">This Acne is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</string>
-    <string name="product_head">Suggested Product</string>
+    <string name="solusi_head">Solusi</string>
+    <string name="tv_acne_sol_pc">Solusi is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</string>
+    <string name="saran_head">Saran</string>
+    <string name="tv_acne_saran_pc">Saran is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</string>
+
 </resources>

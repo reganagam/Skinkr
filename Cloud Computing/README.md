@@ -44,7 +44,7 @@ requests.post("https://skinkrcc-mzlcbhc7tq-uc.a.run.app",json={'base64': *decode
 - https://cloud.google.com/sdk/docs/install
 
 ### 4. Dockerfile, .dockerignore, requirements.txt
-- https://cloud.google.com/run/docs/quickstarts/build-and-deploy#containerizing
+- https://cloud.google.com/run/docs/quickstarts/build-and-deploy
 
 ### 5. Cloud build and deploy
 ```
@@ -52,5 +52,5 @@ gcloud builds submit --tag gcr.io/<project_id>/<function_name>
 gcloud run deploy --image gcr.io/<project_id>/<function_name> --platform managed
 ```
 
-### Test the code
+### 6. Test the code
 - `test/test.py` to test the code

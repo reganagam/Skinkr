@@ -33,7 +33,7 @@ requests.post("https://skinkrcc-mzlcbhc7tq-uc.a.run.app",json={'base64': *decode
 ```
 
 # Google Cloud Run
-### 1. Write App (Flask, TensorFlow)
+### 1. Code App (Flask, TensorFlow)
 - `main.py` as implementation of app
 
 ### 2. Setup Google Cloud 

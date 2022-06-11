@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">skinkr</string>
     <string name="acne_name">Acne Name</string>
+    <string name="tv_acne_name_pc">Acne Name</string>
+    <string name="tv_acne_desc_pc">This Acne is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</string>
+    <string name="product_head">Suggested Product</string>
 </resources>

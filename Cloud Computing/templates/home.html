@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkinKR</title>
+    <link rel="stylesheet" href="templates/assets/styles/style.css">
+</head>
+
+<body>
+ 
+    <header> 
+        <div class="jumbotron">
+            <h1>SkinKR</h1>
+            <p>SkinKR API Version 1.0</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#overview">OVERVIEW</a></li>
+                <li><a href="#post">POST</a></li>
+                <li><a href="#response">RESPONSE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content"> 
+            <article id="overview" class="card"> 
+                <h2>OVERVIEW</h2>
+                <table border="1">
+                    <tr>
+                        <td>API URL </td>
+                        <td>https://skinkrcc-mzlcbhc7tq-uc.a.run.app</td>
+                    </tr>
+                    <tr>
+                        <td>API Version</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>Request Method</td>
+                        <td>Request (POST)</td>
+                    </tr>
+                    <tr>
+                        <td>Response Format</td>
+                        <td>JSON Format</td>
+                    </tr>
+                    <tr>
+                        <td>Github</td>
+                        <td>https://github.com/ravmhmmd/Skinkr</td>
+                    </tr>
+                </table>
+            </article>
+            <article id="post" class="card">
+                <h2>POST</h2>
+                if you want to use this API, you need to post the json format containing data which is decoded from image to base64 <br>
+                <table border="1">
+                    <tr>
+                        <td>
+                            requests.post("https://skinkrcc-mzlcbhc7tq-uc.a.run.app",json={'base64': <b>*decode image to base64*</b>})
+                        </td>
+                    </tr>
+                </table>
+            </article>
+            <article id="response" class="card">
+                <h2>RESPONSE</h2>
+                Response example
+                <table border="1">
+                    <tr>
+                        <td>
+                            { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;"jenis": str(prediction), <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;"deskripsi": "Blackhead adalah jenis komedo yang tampak seperti pori-pori yang membesar dan menghitam. Terjadi ketika pori-pori membesar dan terbuka ke permukaan kulit dan ke kelenjar minyak, lalu teroksidasi oleh udara dan berubah menjadi warna hitam/coklat. Komedo jenis ini adalah komedo yang paling sering dialami oleh kebanyakan orang.", <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;"solusi": [ <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Menggunakan produk dengan asam salisilat", <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Gunakan Krim dan Losion Retinoid", <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Lakukan Chemical Peeling" <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;], <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;"saran": [ <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Wardah Acnederm Pore Blackhead Balm", <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Neutrogena Deep Clean Blackhead Eliminating Scrub", <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Innisfree Super Volcanic Pore Clay Mask" <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;] <br>
+                            } <br>       
+                            
+                        </td>
+                    </tr>
+                </table>
+            </article>
+        </div>
+
+        <aside>
+            <article class="profile card">
+                <header>
+                    <h2>SkinKR</h2>
+                    <!-- <p>(tagline)</p> -->
+                </header>
+                <section>
+                    <center><h3>More Info</h3></center>
+                    <table>
+                        <tr>
+                            <th>Address</th>
+                            <td>Indonesia</td>
+                        </tr>
+                        <tr>
+                            <th>Launch</th>
+                            <td>Soon at 2022</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+        </aside>
+    </main>
+
+    <footer>
+        <p> SKINKR &#169; 2022, BANGKIT CAPSTONE</p>
+    </footer>
+</body>
+</html>

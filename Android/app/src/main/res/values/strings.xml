@@ -2,10 +2,16 @@
     <string name="app_name">skinkr</string>
     <string name="acne_name">Acne Name</string>
     <string name="tv_acne_name_pc">Acne Name</string>
-    <string name="tv_acne_desc_pc">This Acne is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</string>
-    <string name="solusi_head">Solusi</string>
-    <string name="tv_acne_sol_pc">Solusi is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</string>
-    <string name="saran_head">Saran</string>
-    <string name="tv_acne_saran_pc">Saran is blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</string>
-
+    <string name="tv_acne_desc_pc">Lorem ipsum Acne Desc</string>
+    <string name="tv_acne_saran_pc">Acne saran</string>
+    <string name="tv_acne_soulsi_pc">Acne solusi</string>
+    <string name="product_head">Suggested Product</string>
+    <string name="image_user">Image User</string>
+    <string name="saran">Saran</string>
+    <string name="tv_acne_solusi_pc">Acne Solusi</string>
+    <string name="solusi">Solusi</string>
+    <string name="done">Done</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="scan_my_face">Scan My Face</string>
 </resources>

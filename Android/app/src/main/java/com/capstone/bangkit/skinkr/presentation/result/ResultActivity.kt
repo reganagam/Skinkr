@@ -8,7 +8,6 @@ import com.capstone.bangkit.skinkr.presentation.home.HomeActivity
 
 class ResultActivity : AppCompatActivity() {
 
-
     private lateinit var binding: ActivityResultBinding
 
     companion object {

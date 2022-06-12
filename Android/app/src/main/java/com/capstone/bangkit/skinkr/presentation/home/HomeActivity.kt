@@ -84,8 +84,10 @@ class HomeActivity : AppCompatActivity() {
             )
         }
 
-        binding.btnInsertPhoto.setOnClickListener { startTakePhoto() }
-        binding.uploadAndScan.setOnClickListener { uploadToCC() }
+        binding.btnCamera.setOnClickListener { startTakePhoto() }
+        binding.btnGallery.setOnClickListener { startGallery() }
+
+        binding.uploadButton.setOnClickListener { uploadToCC() }
     }
 
     @SuppressLint("QueryPermissionsNeeded")
@@ -119,6 +121,24 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    private val launcherIntentGallery = registerForActivityResult(ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            val selectedImg: Uri = result.data?.data as Uri
+            val myFile = uriToFile(selectedImg, this)
+            getFile = myFile
+            binding.imageFace.setImageURI(selectedImg)
+        }
+    }
+
+    private fun startGallery() {
+        val intent = Intent()
+        intent.action = Intent.ACTION_GET_CONTENT
+        intent.type = "image/*"
+        val chooser = Intent.createChooser(intent, "Choose a Picture")
+        launcherIntentGallery.launch(chooser)
+    }
+
     private fun uploadToCC() {
         if(getFile != null) {
             val file = reduceFileImage(getFile as File)
@@ -129,8 +149,13 @@ class HomeActivity : AppCompatActivity() {
                             binding.loading.visibility = View.VISIBLE
                         }
                         is ResultRespond.Success -> {
+                            val cSaran = result.data.saran?.joinToString(", ")
+                            val cSolusi = result.data.solusi?.joinToString(", ")
                             val intent = Intent(this,ResultActivity::class.java)
-                            intent.putExtra(ResultActivity.ACNE_NAME,"ACNE_NAME")
+                            intent.putExtra("ACNE_NAME",result.data.jenis)
+                            intent.putExtra("ACNE_DESC",result.data.deskripsi)
+                            intent.putExtra("ACNE_SARAN",cSaran)
+                            intent.putExtra("ACNE_SOLUSI",cSolusi)
                             startActivity(intent)
                             binding.loading.visibility = View.GONE
                         }

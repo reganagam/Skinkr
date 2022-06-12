@@ -19,6 +19,7 @@
         android:theme="@style/Theme.Skinkr">
         <activity
             android:name=".presentation.result.ResultActivity"
+            android:label="Skinkr/Result"
             android:exported="false" />
         <activity
             android:name=".presentation.home.HomeActivity"

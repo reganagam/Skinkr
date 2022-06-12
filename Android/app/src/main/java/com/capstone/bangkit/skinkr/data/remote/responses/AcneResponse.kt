@@ -1,11 +1,8 @@
 package com.capstone.bangkit.skinkr.data.remote.responses
 
-import com.google.gson.annotations.SerializedName
-
 data class AcneResponse(
-    @field:SerializedName("prediction")
-    val prediction: String
-/*
-    @field:SerializedName("products")
-    val products: String*/
+	val saran: List<String?>? = null,
+	val solusi: List<String?>? = null,
+	val jenis: String? = null,
+	val deskripsi: String? = null
 )

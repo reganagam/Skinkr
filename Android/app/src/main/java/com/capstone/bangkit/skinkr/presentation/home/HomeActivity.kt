@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -30,6 +31,8 @@ import java.io.File
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+
+    private lateinit var usedImgForPass: Bitmap
 
     private val homeViewModel : HomeViewModel by viewModels {
         ViewModelFactory.getInstance(this)
@@ -117,6 +120,7 @@ class HomeActivity : AppCompatActivity() {
 
 
            val result = rotateBitmap(BitmapFactory.decodeFile(getFile?.path))
+           usedImgForPass = result
            binding.imageFace.setImageBitmap(result)
         }
     }

@@ -44,7 +44,6 @@
                 android:text="@string/saran"
                 android:textSize="16sp"
                 android:textStyle="bold" />
-
             <TextView
                 android:id="@+id/lorem_saran"
                 android:layout_width="match_parent"
@@ -54,8 +53,6 @@
                 android:layout_marginEnd="24sp"
                 android:text="@string/tv_acne_saran_pc"
                 android:textSize="16sp" />
-
-
             <TextView
                 android:id="@+id/tv_solusi"
                 android:layout_width="match_parent"
